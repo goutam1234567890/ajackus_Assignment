@@ -5,4 +5,7 @@ const mockEmployees = [
     { id: 4, firstName: 'Bob', lastName: 'Johnson', email: 'bob.johnson@example.com', department: 'IT', role: 'Support' },
     { id: 5, firstName: 'Carol', lastName: 'Davis', email: 'carol.davis@example.com', department: 'HR', role: 'Recruiter' },
     // Add more as needed
-]; 
+];
+
+// Make it globally accessible
+window.mockEmployees = mockEmployees; 

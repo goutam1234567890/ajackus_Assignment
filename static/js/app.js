@@ -1,5 +1,5 @@
 // Main app logic
-let employees = JSON.parse(localStorage.getItem('employees')) || [...mockEmployees];
+let employees = JSON.parse(localStorage.getItem('employees')) || [...(window.mockEmployees || [])];
 let currentPage = 1;
 let itemsPerPage = 2;
 let searchQuery = '';
@@ -315,4 +315,5 @@ function showFilterPopup() {
 }
 
 // Initial render
+console.log('App starting...', { employees: employees.length, mockEmployees: window.mockEmployees });
 renderApp(); 
